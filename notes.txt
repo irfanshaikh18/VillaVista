@@ -1,0 +1,6 @@
+Reference the Class Library in Your MVC Project
+If you have an ASP.NET Core MVC project (e.g., MyMvcApp), link the Class Library to it:
+
+dotnet add MyMvcApp/MyMvcApp.csproj reference MyClassLibrary/MyClassLibrary.csproj
+
+This allows your MVC project to use classes from the library.
