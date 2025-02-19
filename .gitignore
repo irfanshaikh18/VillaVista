@@ -1,0 +1,57 @@
+# Ignore Visual Studio specific files
+.vscode/
+*.vsconfig
+
+# Ignore build output
+bin/
+obj/
+out/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.ide
+
+# Ignore Rider / JetBrains IDE
+.idea/
+*.iml
+
+# Ignore .NET dependencies
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.log
+
+# Ignore ASP.NET Core secrets
+secrets.json
+
+# Ignore publish outputs
+publish/
+wwwroot/
+
+# Ignore package managers
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Ignore logs and database files
+logs/
+*.log
+*.db
+*.sqlite
+*.bak
+
+# Ignore temporary files
+temp/
+*.tmp
+
+# Ignore generated files
+GeneratedFiles/
+_Dependencies/
+
+# Ignore MacOS and Linux files
+.DS_Store
+Thumbs.db
