@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaVista.Web", "VillaVista.Web\VillaVista.Web.csproj", "{A5DE4255-9F05-45DB-8DAC-8BB6CC3A4696}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaVista.Domain", "VillaVista.Domain\VillaVista.Domain.csproj", "{1EAEA289-89B8-432A-BD9F-FD0F15B8213D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaVista.Application", "VillaVista.Application\VillaVista.Application.csproj", "{6247B5A9-B52D-4848-A550-A29D593F0EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaVista.Infrastructure", "VillaVista.Infrastructure\VillaVista.Infrastructure.csproj", "{8458E854-CAA5-4B26-85C6-27BD37940DCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{A5DE4255-9F05-45DB-8DAC-8BB6CC3A4696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5DE4255-9F05-45DB-8DAC-8BB6CC3A4696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5DE4255-9F05-45DB-8DAC-8BB6CC3A4696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EAEA289-89B8-432A-BD9F-FD0F15B8213D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAEA289-89B8-432A-BD9F-FD0F15B8213D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAEA289-89B8-432A-BD9F-FD0F15B8213D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAEA289-89B8-432A-BD9F-FD0F15B8213D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6247B5A9-B52D-4848-A550-A29D593F0EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6247B5A9-B52D-4848-A550-A29D593F0EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6247B5A9-B52D-4848-A550-A29D593F0EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6247B5A9-B52D-4848-A550-A29D593F0EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8458E854-CAA5-4B26-85C6-27BD37940DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8458E854-CAA5-4B26-85C6-27BD37940DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8458E854-CAA5-4B26-85C6-27BD37940DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8458E854-CAA5-4B26-85C6-27BD37940DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
