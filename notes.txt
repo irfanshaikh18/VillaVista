@@ -24,4 +24,7 @@ $~ dotnet ef migrations add AddVillaToDb --project VillaVista.Infrastructure --s
 --project means which project contains the DbContext class
 --startup-project means which project contains the database connection information and other information.
 
+📝 Never, Ever change the migrations folder. Always keep it as it is and do not try to change 
+anything in that folder.
+
 ****
