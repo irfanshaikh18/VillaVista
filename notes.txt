@@ -1,6 +1,27 @@
 Reference the Class Library in Your MVC Project
 If you have an ASP.NET Core MVC project (e.g., MyMvcApp), link the Class Library to it:
 
-dotnet add MyMvcApp/MyMvcApp.csproj reference MyClassLibrary/MyClassLibrary.csproj
+$~ dotnet add MyMvcApp/MyMvcApp.csproj reference MyClassLibrary/MyClassLibrary.csproj
 
 This allows your MVC project to use classes from the library.
+
+****
+
+dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef // if you already have it update
+
+PMC (Windows)	                .NET CLI (Mac/Linux)
+Add-Migration InitialCreate	    dotnet ef migrations add InitialCreate
+Update-Database	                dotnet ef database update
+Remove-Migration	            dotnet ef migrations remove
+Get-DbContext	                dotnet ef dbcontext info
+
+
+// specify --project and --startup-project options to Entity Framework Core CLI tools like this
+
+$~ dotnet ef migrations add AddVillaToDb --project VillaVista.Infrastructure --startup-project VillaVista.Web
+
+--project means which project contains the DbContext class
+--startup-project means which project contains the database connection information and other information.
+
+****

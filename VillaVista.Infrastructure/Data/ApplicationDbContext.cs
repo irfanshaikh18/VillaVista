@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using VillaVista.Domain.Entities;
 
 namespace VillaVista.Infrastructure.Data
 {
@@ -8,5 +9,7 @@ namespace VillaVista.Infrastructure.Data
         {
 
         }
+
+        public DbSet<Villa> Villas { get; set; }
     }
 }
