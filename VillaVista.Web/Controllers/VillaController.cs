@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using VillaVista.Domain.Entities;
 using VillaVista.Infrastructure.Data;
 
 namespace VillaVista.Web.Controllers
@@ -20,6 +21,19 @@ namespace VillaVista.Web.Controllers
 
         public IActionResult Create()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Villa obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _dbContext.Villas.Add(obj);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
             return View();
         }
     }
