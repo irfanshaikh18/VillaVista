@@ -17,5 +17,10 @@ namespace VillaVista.Web.Controllers
             List<Domain.Entities.Villa> villas = _dbContext.Villas.ToList();
             return View(villas);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
