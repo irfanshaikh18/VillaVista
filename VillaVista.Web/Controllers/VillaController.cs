@@ -49,7 +49,7 @@ namespace VillaVista.Web.Controllers
             // Villa? obj = _dbContext.Villas.Where(u => u.Price > 50 && u.Occupancy > 0);
             // Above couple examples shows the multiple ways to retrieve data using ef core
 
-            if (obj == null)
+            if (obj is null)
             {
                 return RedirectToAction("Error", "Home");
             }
@@ -73,13 +73,27 @@ namespace VillaVista.Web.Controllers
         public IActionResult Delete(int villaId)
         {
             Villa? obj = _dbContext.Villas.FirstOrDefault(u => u.Id == villaId);
-            
-            if (obj == null)
+
+            if (obj is null)
             {
                 return RedirectToAction("Error", "Home");
             }
 
             return View(obj);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Villa obj)
+        {
+            Villa? objFromDb = _dbContext.Villas.FirstOrDefault(u => u.Id == obj.Id);
+            if (objFromDb is not null)
+            {
+                _dbContext.Villas.Remove(objFromDb);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
     }
 }
