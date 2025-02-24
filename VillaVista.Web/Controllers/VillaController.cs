@@ -45,6 +45,9 @@ namespace VillaVista.Web.Controllers
         public IActionResult Update(int villaId)
         {
             Villa? obj = _dbContext.Villas.FirstOrDefault(u => u.Id == villaId);
+            // Villa? obj = _dbContext.Villas.Find(villaId); // If you are working on primary key like villaId,
+            // Villa? obj = _dbContext.Villas.Where(u => u.Price > 50 && u.Occupancy > 0);
+            // Above couple examples shows the multiple ways to retrieve data using ef core
 
             if (obj == null)
             {
