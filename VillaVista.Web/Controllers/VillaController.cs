@@ -41,5 +41,17 @@ namespace VillaVista.Web.Controllers
 
             return View();
         }
+
+        public IActionResult Update(int villaId)
+        {
+            Villa? obj = _dbContext.Villas.FirstOrDefault(u => u.Id == villaId);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
     }
 }
