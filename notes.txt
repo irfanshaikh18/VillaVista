@@ -28,3 +28,12 @@ $~ dotnet ef migrations add AddVillaToDb --project VillaVista.Infrastructure --s
 anything in that folder.
 
 ****
+
+TempData
+
+The great thing about TempData is it only stays there for one request. If you refresh the 
+page here, it goes away. And the reason behind that is when you display notification, they 
+will only stay there for one call. And even if you refresh that, it will go away.
+And because of that main reason for 'TempData' is for notification.
+
+****

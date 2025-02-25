@@ -15,7 +15,7 @@ namespace VillaVista.Web.Controllers
 
         public IActionResult Index()
         {
-            List<Domain.Entities.Villa> villas = _dbContext.Villas.ToList();
+            List<Villa> villas = _dbContext.Villas.ToList();
             return View(villas);
         }
 
@@ -29,16 +29,18 @@ namespace VillaVista.Web.Controllers
         {
             if (obj.Name == obj.Description)
             {
-                ModelState.AddModelError("Name", "The description cannot exactly match the name.");
+                ModelState.AddModelError("Name", "The description cannot exactly match the name");
             }
 
             if (ModelState.IsValid)
             {
                 _dbContext.Villas.Add(obj);
                 _dbContext.SaveChanges();
+                TempData["success"] = "The villa has been created successfully";
                 return RedirectToAction("Index");
             }
 
+            TempData["error"] = "The villa could not be created";
             return View();
         }
 
@@ -64,9 +66,11 @@ namespace VillaVista.Web.Controllers
             {
                 _dbContext.Villas.Update(obj);
                 _dbContext.SaveChanges();
+                TempData["success"] = "The villa has been updated successfully";
                 return RedirectToAction("Index");
             }
 
+            TempData["error"] = "The villa could not be updated";
             return View();
         }
 
@@ -86,13 +90,16 @@ namespace VillaVista.Web.Controllers
         public IActionResult Delete(Villa obj)
         {
             Villa? objFromDb = _dbContext.Villas.FirstOrDefault(u => u.Id == obj.Id);
+
             if (objFromDb is not null)
             {
                 _dbContext.Villas.Remove(objFromDb);
                 _dbContext.SaveChanges();
+                TempData["success"] = "The villa has been deleted successfully";
                 return RedirectToAction("Index");
             }
 
+            TempData["error"] = "The villa could not be deleted";
             return View();
         }
     }

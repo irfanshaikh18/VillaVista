@@ -7,7 +7,8 @@
     <title>@ViewData["Title"] - VillaVista.Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/lib/codeseven-toaster/toaster.min.css" />
     <link rel="stylesheet" href="~/VillaVista.Web.styles.css" asp-append-version="true" />
 </head>
 
@@ -38,6 +39,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification.cshtml" />
             @RenderBody()
         </main>
     </div>
