@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - VillaVista.Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="~/lib/codeseven-toaster/toaster.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VillaVista.Web.styles.css" asp-append-version="true" />
 </head>
 
@@ -16,7 +16,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VillaVista.Web</a>
+                <a class="navbar-brand nav-icon" asp-area="" asp-controller="Home" asp-action="Index"><img
+                        src="~/images/resort.png" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -44,9 +45,10 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - VillaVista.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer bg-dark text-muted">
+        <div class="container text-center">
+            &copy; <span id="currentYear"></span> - VillaVista - Made with <i class="bi bi-heart-fill heart-icon"></i>
+            by codeisk (<a class="footer-link" href="https://www.linkedin.com/in/irfanshaikh18/">Irfan Shaikh</a>)
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
